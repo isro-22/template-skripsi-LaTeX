@@ -1,0 +1,97 @@
+\documentclass[11pt, oneside, openright]{report}
+\usepackage[a5paper, top=1.5cm, bottom=1.5cm, inner=2.5cm, outer=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{amsmath,chemmacros,physics}
+\usepackage{graphicx}
+\usepackage{enumerate, enumitem}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{mathptmx}
+\usepackage{cite}
+\usepackage{float, graphicx, subfig}
+\usepackage{indentfirst}
+\usepackage{times}
+\usepackage[square,numbers,sort&compress]{natbib}
+%\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+%=============USER INPUT========================
+\title{Thermal Expansion Anomaly Ice Ih and Ice Ic using TIP4P/Ice Model}
+\author{Muhammad Isro'}
+\newcommand{\titleINA}{Anomali Ekspansi Termal Es Ih dan Es Ic dengan model TIP4P/Ice}
+\newcommand{\NIM}{165090201111047}
+\newcommand{\TahunSkripsi}{2020}
+\newcommand{\TanggalUjianKomprehensif}{.............}
+\newcommand{\NamaPembimbingA}{Drs. Budi Kamulyan, M.Sc}
+\newcommand{\NipPembimbingA}{19630619 199002 1 001}
+\newcommand{\NamaPembimbingB}{Dr. Diah Mardiana, MS}
+\newcommand{\NipPembimbingB}{19630529 19910 3 002}
+\newcommand{\NamaKajur}{Masruri, S.Si.,M.Si.,Ph.D.}
+\newcommand{\NipKajur}{19731020 200212 1 001}
+%================END USER INPUT=================
+\setlength{\footskip}{0.5cm}
+\setlength{\parindent}{1cm}
+\hangindent = 1cm
+\renewcommand{\contentsname}{\bf{\normalsize TABLE OF CONTENT}}
+\renewcommand{\listfigurename}{\bf{\normalsize LIST OF FIGURES}}
+\renewcommand{\listtablename}{\bf{\normalsize LIST OF TABLES}}
+\renewcommand{\chaptername}{\bf{\normalsize CHAPTER}}
+\renewcommand{\bibname}{BIBLIOGRAPHY}
+
+\newcommand*{\justifyheading}{\center}
+%Position of Chaptertitle
+\titlespacing{\chapter}{0pt}{-3\baselineskip}{2\baselineskip}%
+
+\titleformat{\chapter}[display]
+{\normalfont\normalsize\bfseries\justifyheading}{\chaptertitlename\ \thechapter}{11pt}{\normalsize}
+
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection}{11pt}{\normalsize}
+	
+
+\begin{document}
+\input{preamble-skripsi}
+\newpage
+
+\addcontentsline{toc}{section}{\contentsname}
+\tableofcontents
+
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+
+\clearpage
+
+\clearpage
+
+\newgeometry{top=1.5cm, bottom=1.5cm, inner=2.5cm, outer=1.5cm, twoside}
+\pagenumbering{arabic}
+
+\fancypagestyle{plain}{
+	\fancyhf{} %clear format header
+	\fancyfoot[LE,RO]{\thepage} %membuat halaman berada di kanan & kiri
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{plain}
+
+\include{CHAPTER1}
+\include{CHAPTER2}
+\include{CHAPTER3}
+\include{CHAPTER4}
+\include{CHAPTER5}
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+
+\bibliography{reference}
+\bibliographystyle{plain}
+
+\newpage
+\addcontentsline{toc}{chapter}{APPENDIX}
+\include{APPENDIX}
+
+
+\end{document}
